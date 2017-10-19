@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Super Mario Trivia!!</title>
+    <!--Google font is -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Sigmar+One" rel="stylesheet">
+    <!--css files-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src='assets/images/.jpg' alt='headerImg' width='100%'>
+    </header>
+    <div class='container'>
+        <button class='btn btn-primary' id='startBtn'>Start</button>
+        <button class='btn btn-primary' onclick="initGameA()" id="QuizBtnA"></button>
+        <button class='btn btn-primary' onclick="initGameB()" id="QuizBtnB"></button> 
+        <!-- Question page for gameA -->
+        <div id=questions></div>
+        <div id=results></div>
+        <div id=quest1></div>
+        <div id=quest2></div>
+        <div id=quest3></div>
+        <div id=quest4></div>
+        <div id=quest5></div>
+        <div id=quest6></div>
+        <div id=quest7></div>
+        <div id=quest8></div>
+        <div id=quest9></div>
+        <div id=quest10></div>
+        <!--this is for both A and B -->
+        <div id=timeLeft></div>
+        <!--Question page for B -->
+        <div id=currentQuestion></div>
+        <div class='question'></div>
+        <div class='answerList'></div>
+        <!-- Answer Page -->
+        <div id=message></div>
+        <div id=correctedAnswer></div>
+        <div id=gif></div>
+        <!-- Scoreboard -->
+        <div id=finalMessage></div>
+        <div id=correctAnswers></div>
+        <div id=incorrectAnswers></div>
+        <div id=unanswered></div>
+        <div id='startOverBtn'></div>
+    </div>
+    <!--jquery and javascript files-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+
+</html>
