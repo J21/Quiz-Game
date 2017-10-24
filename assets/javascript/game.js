@@ -140,6 +140,96 @@ $('#startOverBtn').on('click', function(){
 //for this function set up the html with 10 questions, quiz stye
 function newGameA(){
 	$('#results').html("Show me the answers!");
+	currentQuestion = 0;
+	$('#quest1').html('<h2>' + triviaQuestionsA[currentQuestion].question + '</h2>');
+	for(var i = 0; i < 4; i++){
+		var choices = $('<div>');
+		choices.text(triviaQuestionsA[currentQuestion].answerList[i]);
+		choices.attr({'data-index': i });
+		choices.addClass('thisChoice');
+		$('.answerList').append(choices);
+	}
+	currentQuestion++;
+	$('#quest2').html('<h2>' + triviaQuestionsA[currentQuestion].question + '</h2>');
+	for(var i = 0; i < 4; i++){
+		var choices = $('<div>');
+		choices.text(triviaQuestionsA[currentQuestion].answerList[i]);
+		choices.attr({'data-index': i });
+		choices.addClass('thisChoice');
+		$('.answerList').append(choices);
+	}
+	currentQuestion++;
+	$('#quest3').html('<h2>' + triviaQuestionsA[currentQuestion].question + '</h2>');
+	for(var i = 0; i < 4; i++){
+		var choices = $('<div>');
+		choices.text(triviaQuestionsA[currentQuestion].answerList[i]);
+		choices.attr({'data-index': i });
+		choices.addClass('thisChoice');
+		$('.answerList').append(choices);
+	}
+	currentQuestion++;
+	$('#quest4').html('<h2>' + triviaQuestionsA[currentQuestion].question + '</h2>');
+	for(var i = 0; i < 4; i++){
+		var choices = $('<div>');
+		choices.text(triviaQuestionsA[currentQuestion].answerList[i]);
+		choices.attr({'data-index': i });
+		choices.addClass('thisChoice');
+		$('.answerList').append(choices);
+	}
+	currentQuestion++;
+	$('#quest5').html('<h2>' + triviaQuestionsA[currentQuestion].question + '</h2>');
+	for(var i = 0; i < 4; i++){
+		var choices = $('<div>');
+		choices.text(triviaQuestionsA[currentQuestion].answerList[i]);
+		choices.attr({'data-index': i });
+		choices.addClass('thisChoice');
+		$('.answerList').append(choices);
+	}
+	currentQuestion++;
+	$('#quest6').html('<h2>' + triviaQuestionsA[currentQuestion].question + '</h2>');
+	for(var i = 0; i < 4; i++){
+		var choices = $('<div>');
+		choices.text(triviaQuestionsA[currentQuestion].answerList[i]);
+		choices.attr({'data-index': i });
+		choices.addClass('thisChoice');
+		$('.answerList').append(choices);
+	}
+	currentQuestion++;
+	$('#quest7').html('<h2>' + triviaQuestionsA[currentQuestion].question + '</h2>');
+	for(var i = 0; i < 4; i++){
+		var choices = $('<div>');
+		choices.text(triviaQuestionsA[currentQuestion].answerList[i]);
+		choices.attr({'data-index': i });
+		choices.addClass('thisChoice');
+		$('.answerList').append(choices);
+	}
+	currentQuestion++;
+	$('#quest8').html('<h2>' + triviaQuestionsA[currentQuestion].question + '</h2>');
+	for(var i = 0; i < 4; i++){
+		var choices = $('<div>');
+		choices.text(triviaQuestionsA[currentQuestion].answerList[i]);
+		choices.attr({'data-index': i });
+		choices.addClass('thisChoice');
+		$('.answerList').append(choices);
+	}
+	currentQuestion++;
+	$('#quest9').html('<h2>' + triviaQuestionsA[currentQuestion].question + '</h2>');
+	for(var i = 0; i < 4; i++){
+		var choices = $('<div>');
+		choices.text(triviaQuestionsA[currentQuestion].answerList[i]);
+		choices.attr({'data-index': i });
+		choices.addClass('thisChoice');
+		$('.answerList').append(choices);
+	}
+	currentQuestion++;
+	$('#quest10').html('<h2>' + triviaQuestionsA[currentQuestion].question + '</h2>');
+	for(var i = 0; i < 4; i++){
+		var choices = $('<div>');
+		choices.text(triviaQuestionsA[currentQuestion].answerList[i]);
+		choices.attr({'data-index': i });
+		choices.addClass('thisChoice');
+		$('.answerList').append(choices);
+	}
 }
 
 //thisfunction sets up the html by declaring variables to either 0 or leaving it empty, then calls questionB function
@@ -162,7 +252,7 @@ function newQuestionB(){
 	$('#gif').empty();
 	answered = true;
 	
-	//sets up new questions & answerList
+	//sets up new questions for quizA & answerList
 	$('#currentQuestion').html('Question #'+(currentQuestion+1)+'/'+triviaQuestionsB.length);
 	$('.question').html('<h2>' + triviaQuestionsB[currentQuestion].question + '</h2>');
 	for(var i = 0; i < 4; i++){
@@ -187,6 +277,9 @@ function countdownA(){
 	answered = true;
 	//sets timer to go down
 	time = setInterval(showCountdownA, 1000);
+	if(seconds === 0){
+		scoreboardA();
+	}
 }
 
 function countdownB(){
