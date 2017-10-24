@@ -314,8 +314,8 @@ function answerPageB(){
 	$('#currentQuestion').empty();
 	$('.thisChoice').empty(); //Clears question page
 	$('.question').empty();
-	var rightAnswerText = triviaQuestions[currentQuestion].answerList[triviaQuestions[currentQuestion].answer];
-	var rightAnswerIndex = triviaQuestions[currentQuestion].answer;
+	var rightAnswerText = triviaQuestionsB[currentQuestion].answerList[triviaQuestionsB[currentQuestion].answer];
+	var rightAnswerIndex = triviaQuestionsB[currentQuestion].answer;
 	$('#gif').html('<img src = "assets/images/'+ gifArray[currentQuestion] +'.gif" width = "400px">');
 	//checks to see correct, incorrect, or unanswered
 	if((userSelect == rightAnswerIndex) && (answered == true)){
@@ -332,7 +332,7 @@ function answerPageB(){
 		answered = true;
 	}
 	
-	if(currentQuestion == (triviaQuestions.length-1)){
+	if(currentQuestion == (triviaQuestionsB.length-1)){
 		setTimeout(scoreboardB, 5000)
 	} else{
 		currentQuestion++;
