@@ -1,5 +1,48 @@
-//the trivia questions (15 in all, in an object)
-var triviaQuestions = [{
+//the trivia questions for Game A(10 in all, in an object)
+var triviaQuestionsA = [{
+	question: "Luigi's first game as the main character is...",
+	answerList: ["Luigi's Mansion", "Mario is Missing!", "Mario Bros.", "Super Mario Bros. The Lost Levels"],
+	answer: 1
+},{
+	question: "The current Donkey Kong's first appearance was in which game?",
+	answerList: ["Donkey Kong Country", "Donkey Kong", "Donkey Kong Jr.", "Donkey Kong Land"],
+	answer: 0
+},{
+	question: "Which villain has not made a mainstream appearance?",
+	answerList: ["Waluigi", "Bowser", "Mario", "Wario"],
+	answer: 0
+},{
+	question: "In Super Mario Bros. 2, who has the weakest jump?",
+	answerList: ["Luigi", "Mario", "Toad", "Princess Peach"],
+	answer: 2
+},{
+	question: "Which game was Mario a villain in?",
+	answerList: ["Super Mario 64", "Mario Party", "Super Mario Kart", "Yoshi's Safari"],
+	answer: 3
+},{
+	question: "When year did the first WarioWare game come out?",
+	answerList: ["2003", "2000", "2004", "1998"],
+	answer: 0
+},{
+	question: "Which game used Yoshi's current posture (upright instead of hunched)?",
+	answerList: ["Yoshi's Cookie", "Yoshi's Story", "Super Mario World 2: Yoshi's Island", "Yoshi"],
+	answer: 1
+},{
+	question: "What color was Bowser in the American cartoon shows?",
+	answerList: ["brown", "red", "green", "orange"],
+	answer: 2
+},{
+	question: "Daisy has only made one appearance in a mainstream game, which was it?",
+	answerList: ["Super Mario World", "Super Mario Land", "Mario Tennis", "Mario Golf: Toadstool Tour"],
+	answer: 1
+},{
+	question: "Peach's current voice actress is?",
+	answerList: ["Jen Taylor", "Asako Kozuki", "Leslie Swan", "Samantha Kelly"],
+	answer: 3
+}];
+
+//the trivia questions for gameB(15 in all, in an object)
+var triviaQuestionsB = [{
 	question: "Mario's first game was...",
 	answerList: ["Mario Bros.", "Donkey Kong", "Super Mario Bros.", "Super Mario World 2: Yoshi's Island"],
 	answer: 1
@@ -97,10 +140,6 @@ $('#startOverBtn').on('click', function(){
 //for this function set up the html with 10 questions, quiz stye
 function newGameA(){
 	$('#results').html("Show me the answers!");
-	correctAnswer = 0;
-	incorrectAnswer = 0;
-	unanswered = 0;
-	newQuestionA();
 }
 
 //thisfunction sets up the html by declaring variables to either 0 or leaving it empty, then calls questionB function
@@ -124,11 +163,11 @@ function newQuestionB(){
 	answered = true;
 	
 	//sets up new questions & answerList
-	$('#currentQuestion').html('Question #'+(currentQuestion+1)+'/'+triviaQuestions.length);
-	$('.question').html('<h2>' + triviaQuestions[currentQuestion].question + '</h2>');
+	$('#currentQuestion').html('Question #'+(currentQuestion+1)+'/'+triviaQuestionsB.length);
+	$('.question').html('<h2>' + triviaQuestionsB[currentQuestion].question + '</h2>');
 	for(var i = 0; i < 4; i++){
 		var choices = $('<div>');
-		choices.text(triviaQuestions[currentQuestion].answerList[i]);
+		choices.text(triviaQuestionsB[currentQuestion].answerList[i]);
 		choices.attr({'data-index': i });
 		choices.addClass('thisChoice');
 		$('.answerList').append(choices);
