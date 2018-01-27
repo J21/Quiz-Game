@@ -1,1 +1,1 @@
-# Quiz-Game
+Welcome! This game will test exactly how well you know Mario and his friends! There are two versions to choose from, though it's not perfect and I am continuously coming back and testing it so that it will be perfect!
